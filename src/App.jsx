@@ -1,6 +1,8 @@
 import { toast, ToastContainer } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
 
+// install the package to use the toasters( npm i react-toastify )
+// https://www.npmjs.com/package/react-toastify
 
 function App() {
   const notify = () => {
@@ -31,7 +33,19 @@ function App() {
   return (
     <>
       <button onClick={notify}>Notify</button>;
-      <ToastContainer />
+      <ToastContainer
+        // position="top-left"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"
+      // transition:Bounce,
+      />
     </>
   );
 }
